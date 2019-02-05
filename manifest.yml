@@ -1,0 +1,6 @@
+---
+applications:
+- name: cicd-travis
+  buildpacks:
+    - staticfile_buildpack
+  path: dist/
