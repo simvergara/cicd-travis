@@ -26,6 +26,7 @@
     "@angular/router": "^7.0.0",
     "@angular/upgrade": "^7.0.0",
     "angular-in-memory-web-api": "^0.6.0",
+    "codelyzer": "^4.5.0",
     "core-js": "^2.5.4",
     "rxjs": "^6.3.0",
     "zone.js": "~0.8.26"
