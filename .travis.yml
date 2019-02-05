@@ -3,11 +3,22 @@ node_js:
   - "9"
 dist: trusty
 sudo: required
+
 branches:
   only:
   - master
+
 before_script:
   - npm install -g @angular/cli
+
 script:
 - ng lint
 - ng build --prod --base-href https://simvergara.github.io/cicd-travis/
+
+deploy:
+  provider: pages
+  skip_cleanup:true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/cicd-travis
+  on:
+    branch: master
