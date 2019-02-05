@@ -16,9 +16,9 @@ script:
 - ng build --prod --base-href https://cicd-travis.cfapps.io
 
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist/cicd-travis
-  on:
-    branch: master
+   provider: cloudfoundry
+   username: simon.vergara.1993@gmail.com
+   password: $PIVOTAL
+   api: https://api.run.pivotal.io
+   organization: simvergara
+   space: development
